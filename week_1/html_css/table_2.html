@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table 2</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 1px solid #aaa;
+      text-align: center;
+      padding: 4px;
+    }
+    th {
+      background-color: #fde3b2;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <caption>making table</caption>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>name</th>
+        <th>count</th>
+        <th>price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>coke</td>
+        <td>1</td>
+        <td>1500</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>soda</td>
+        <td>2</td>
+        <td rowspan="2">1000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>water</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>total</td>
+        <td colspan="3">6500</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
