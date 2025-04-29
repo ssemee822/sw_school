@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      padding: 30px;
+      width: 520px;
+    }
+    .applyType {
+      margin-left: 40px;
+    }
+    .info {
+      margin-left: 40px;
+      margin-bottom: 5px;
+    }
+    .block {
+      margin: 30px 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>프론트앤드 개발자 지원서</h1>
+  <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+  <hr>
+
+  <div class="block">
+    <p><strong>개인정보</strong></p>
+    <div class="info">
+      <label>이름</label>
+      <input type="text" placeholder="공백없이 입력하세요">
+    </div>
+    <div class="info">
+      <label>연락처</label>
+      <input type="tel">
+    </div>
+  </div>
+  
+  <div class="block">
+    <p><strong>지원 분야</strong></p>
+    <div>
+      <label><input class="applyType" type="radio">웹퍼블리싱</label>
+    </div>
+    <div>
+      <label><input class="applyType" type="radio">웹 프론트앤드</label>
+    </div>
+    <div>
+      <label><input class="applyType" type="radio">모바일 앱</label>
+    </div>
+  </div>
+
+  <div class="block">
+    <p><strong>지원동기</strong></p>
+    <textarea rows="5" cols="62"></textarea>
+  </div>
+
+  <div>
+    <button>접수하기</button>
+    <button>다시쓰기</button>
+  </div>
+</body>
+</html>

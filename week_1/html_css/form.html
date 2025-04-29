@@ -7,11 +7,38 @@
 </head>
 <body>
   <form action="url" method="get">
-    <input type="text" name="username" value="name">
+    <input type="text" name="username" value="name" id="username">
     <input type="password" name="pwd" value="password">
   </form>
 
   <label><input type="radio" name="gender" value="male">남성</label>
   <label><input type="radio" name="gender" value="false">여성</label>
   <br>
-  <lab
+  <label for="user-id">id</label>
+  <input type="text" id="user-id">
+
+  <fieldset>
+    <legend>sign up</legend>
+    <label>id <input type="text"></label>
+    <label>password <input type="password"></label>
+  </fieldset>
+
+  <textarea name="desc">contents</textarea>
+
+  <br>
+  <select name="city">
+    <option value="seoul">seoul</option>
+    <option value="busan">busan</option>
+  </select>
+
+  <br>
+  <input type="button">
+  <button type="submit">btn</button>
+
+  <br>
+  <script>
+    const input = document.getElementById('username');
+    console.log(input.value);
+  </script>
+</body>
+</html>
