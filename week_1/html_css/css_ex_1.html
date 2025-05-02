@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css ex 1</title>
+  <style>
+    .back-box {
+      background-color: royalblue;
+      position: relative;
+      width: 300px;
+    }
+    .front-box {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      border: 4px dashed red;
+    }
+    .front-box:hover {
+      z-index: 2;
+    }
+    .first {
+      position: relative;
+    }
+    .second {
+      position: absolute;
+      left: 50px;
+      top: 50px;
+      z-index: 1;
+    }
+    .third {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div class="back-box">
+    <div class="front-box first"></div>
+    <div class="front-box second"></div>
+    <div class="front-box third"></div>
+  </div>
+</body>
+</html>
