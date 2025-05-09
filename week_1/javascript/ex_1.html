@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<script>
+  let rrn = prompt("주민등록번호를 입력하세요 (예: 001231-1234567)");
+
+  if (!rrn.includes('-') || rrn.length !== 14) {
+    alert("형식에 맞게 다시 입력하세요.");
+  } else {
+    let birthYear = rrn.substring(0, 2);
+    let birthMonth = rrn.substring(2, 4);
+    let birthDay = rrn.substring(4, 6);
+    let genderNum = parseInt(rrn.charAt(7));
+    let currentYear = new Date().getFullYear();
+    // 성별 및 세기 구분
+    let fullYear = (genderNum === 1 || genderNum === 2) ? 1900 + parseInt(birthYear) : 2000 + parseInt(birthYear);
+    let gender = (genderNum % 2 === 1) ? "남성" : "여성";
+    let age = currentYear - fullYear + 1;
+    
+    document.write(`<h2>성별: ${gender}</h2>`);
+    document.write(`<h2>나이: ${age}세</h2>`);
+    document.write(`<h2>생년월일: ${birthYear}.${birthMonth}.${birthDay}</h2>`);
+  }
+</script>
