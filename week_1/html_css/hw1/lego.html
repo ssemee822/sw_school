@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홈 | LEGO® Shop KR</title>
+    <link rel="icon" href="./images/lego-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./lego.css" />
+  </head>
+
+  <body>
+    <!-- 헤더 START -->
+    <div>
+      <header class="header">
+        <!-- 유틸리티 바 START-->
+        <div class="utility-bar">
+          <div class="bar-playzone">
+            <a href="https://kids.lego.com" class="playzone">
+              <svg
+                width="37"
+                height="16"
+                viewBox="0 0 37 16"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                class="playzone-icon"
+              >
+                <path
+                  fill="currentColor"
+                  d="M29.493.597l.095.084 6.535 6.54a1 1 0 01.083 1.319l-.083.094-6.535 6.54a1 1 0 01-1.498-1.32l.083-.094 4.83-4.834-31.908.001A1 1 0 01.98 6.934l.116-.007h31.907l-4.83-4.833a1 1 0 01-.082-1.32l.083-.094a1 1 0 011.32-.083z"
+                ></path>
+              </svg>
+              플레이존
+            </a>
+          </div>
+          <div class="bar-banner">
+            <button class="banner-start">
+              <svg
+                width="18"
+                height="28"
+                viewBox="0 0 18 28"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                class="banner-start-svg"
+              >
+                <path
+                  d="M1.825 28L18 14 1.825 0 0 1.715 14.196 14 0 26.285z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </button>
+            <div class="banner-box">
+              <div class="banner-text">
+                <p>
+                  <span>행사 대상 세트 구매 시 레고® 선물 상자 증정*</span>
+                  <a class="banner-text-url">
+                    <span>자세히 보기</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+            <button class="banner-end">
+              <svg
+                width="18"
+                height="28"
+                viewBox="0 0 18 28"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                class="banner-end-svg"
+              >
+                <path
+                  d="M1.825 28L18 14 1.825 0 0 1.715 14.196 14 0 26.285z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="bar-login">
+            <button class="login-box">
+              <svg
+                width="20"
+                height="22"
+                viewBox="0 0 20 22"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g transform="translate(1 1)" fill-rule="nonzero" fill="none">
+                  <rect
+                    stroke="#2C2C2C"
+                    stroke-width="1.5"
+                    fill="#FFCF00"
+                    x="4.875"
+                    width="8.25"
+                    height="6.038"
+                    rx=".729"
+                  ></rect>
+                  <rect
+                    stroke="#2C2C2C"
+                    stroke-width="1.2"
+                    fill="#FFCF00"
+                    x="3.75"
+                    y="14.34"
+                    width="10.5"
+                    height="5.66"
+                    rx=".729"
+                  ></rect>
+                  <path
+                    d="M14.25 17.736H3.75C0 17.736 0 14.717 0 14.717v-8.68S0 3.02 3.75 3.02h10.5C18 3.019 18 6.038 18 6.038v8.679s0 3.019-3.75 3.019z"
+                    stroke="#2C2C2C"
+                    stroke-width="1.5"
+                    fill="#FFCF00"
+                  ></path>
+                  <path
+                    d="M7.125 8.868a.94.94 0 00-.938-.943.94.94 0 00-.937.943c0 .52.42.943.938.943a.94.94 0 00.937-.943zm4.688-.943a.94.94 0 00-.938.943c0 .52.42.943.938.943a.94.94 0 00.937-.943.94.94 0 00-.938-.943zm.293 3.86a.452.452 0 00-.649.21c-.005.008-.461.84-2.463.84-1.953 0-2.437-.793-2.462-.84a.446.446 0 00-.638-.234.618.618 0 00-.215.761c.063.147.69 1.446 3.315 1.446s3.25-1.299 3.313-1.446a.609.609 0 00-.201-.738z"
+                    fill="#2C2C2C"
+                  ></path>
+                </g>
+              </svg>
+              <span>로그인</span>
+            </button>
+            <span class="login-bar"></span>
+            <a data-test="vip-link" class="signup" href="/ko-kr/insiders">
+              <img
+                src="./images/singup.svg"
+                decoding="async"
+                alt=""
+                class="signup-img"
+              />
+              <span>레고® Insiders 회원 가입</span>
+            </a>
+          </div>
+        </div>
+        <!-- 유틸리티 바 ENT-->
+        <!-- 네비게이션 바 START -->
+        <div class="nav-bar">
+          <div class="nav">
+            <div data-focus-lock-disabled="disabled">
+              <nav class="nav-contents">
+                <a aria-label="Lego" data-test="lego-logo" class="nav-logo">
+                  <img
+                    src="https://assets.lego.com/logos/v4.5.0/brand-lego.svg"
+                    alt="LEGO"
+                    width="55"
+                    height="55"
+                    loading="eager"
+                    decoding="async"
+                  />
+                </a>
+                <ul class="nav-list">
+                  <li class="nav-element">
+                    <button
+                      aria-haspopup="menu"
+                      aria-expanded="false"
+                      data-analytics-title="shop"
+                      class="nav-text"
+                    >
+                      레고 제품 쇼핑
+                    </button>
+                  </li>
+                  <li class="nav-element">
+                    <button
+                      aria-haspopup="menu"
+                      aria-expanded="false"
+                      data-analytics-title="discover"
+                      class="nav-text"
+                    >
+                      레고 브랜드 소개
+                    </button>
+                  </li>
+                  <li class="nav-element">
+                    <button
+                      aria-haspopup="menu"
+                      aria-expanded="false"
+                      data-analytics-title="help"
+                      class="nav-text"
+                    >
+                      고객 지원
+                    </button>
+                  </li>
+                  <li class="nav-element">
+                    <a
+                      data-analytics-title=""
+                      class="nav-all-text"
+                      href="/ko-kr/categories/all-sets"
+                    >
+                      <span> 모든 세트 </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div
+              data-focus-guard="true"
+              tabindex="-1"
+              style="
+                width: 1px;
+                height: 0px;
+                padding: 0;
+                overflow: hidden;
+                position: fixed;
+                top: 1px;
+                left: 1px;
+              "
+            ></div>
+            <div class="nav-right">
+              <div class="nav-search">
+                <button class="nav-search-ele">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    aria-hidden="true"
+                    class="Icon__StyledSVG-sc-lm07h6-0 fgDCVZ"
+                  >
+                    <path
+                      d="M18 16.615c0 .375-.137.7-.412.973a1.331 1.331 0 01-.973.412 1.28 1.28 0 01-.973-.412l-3.71-3.7a7.41 7.41 0 01-4.317 1.342c-1.03 0-2.017-.2-2.958-.6a7.616 7.616 0 01-2.434-1.623 7.605 7.605 0 01-1.622-2.433A7.472 7.472 0 010 7.616c0-1.032.2-2.018.6-2.96a7.65 7.65 0 011.623-2.433A7.616 7.616 0 014.657.601 7.49 7.49 0 017.615 0c1.032 0 2.018.2 2.959.601.94.4 1.752.941 2.434 1.622a7.624 7.624 0 011.622 2.434c.4.941.601 1.927.601 2.959a7.403 7.403 0 01-1.342 4.316l3.71 3.71c.267.266.401.592.401.973m-5.539-9c0-1.334-.474-2.475-1.423-3.423C10.09 3.244 8.95 2.77 7.615 2.77c-1.333 0-2.475.474-3.423 1.422C3.243 5.14 2.77 6.28 2.77 7.616c0 1.334.474 2.475 1.423 3.423.948.949 2.09 1.422 3.423 1.422 1.335 0 2.475-.473 3.423-1.422.95-.948 1.423-2.09 1.423-3.423"
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="MainBarstyles__SearchWrapper-sc-b9wn5i-13 kIxmXr">
+                  <div
+                    data-focus-guard="true"
+                    tabindex="-1"
+                    style="
+                      width: 1px;
+                      height: 0px;
+                      padding: 0;
+                      overflow: hidden;
+                      position: fixed;
+                      top: 1px;
+                      left: 1px;
+                    "
+                  ></div>
+                  <div data-focus-lock-disabled="disabled">
+                    <div
+                      class="Searchstyles__Wrapper-sc-jgwoe9-1 cCGbco"
+                      aria-expanded="false"
+                    ></div>
+                  </div>
+                  <div
+                    data-focus-guard="true"
+                    tabindex="-1"
+                    style="
+                      width: 1px;
+                      height: 0px;
+                      padding: 0;
+                      overflow: hidden;
+                      position: fixed;
+                      top: 1px;
+                      left: 1px;
+                    "
+                  ></div>
+                </div>
+              </div>
+              <button class="nav-wishlist">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="18"
+                  viewBox="0 0 20 18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16.84 8.417L10 15.204 3.16 8.417A3.67 3.67 0 012 5.739C2 3.677 3.71 2 5.815 2a3.82 3.82 0 012.754 1.159l1.43 1.467 1.433-1.467A3.818 3.818 0 0114.186 2C16.289 2 18 3.677 18 5.739a3.673 3.673 0 01-1.16 2.678M9.986 18l.014-.014.014.014 8.223-8.116-.018-.019a5.678 5.678 0 001.78-4.126C20 2.569 17.398 0 14.187 0A5.829 5.829 0 0010 1.762 5.827 5.827 0 005.815 0C2.604 0 0 2.569 0 5.739a5.68 5.68 0 001.782 4.126"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+              <a class="nav-cart" href="/ko-kr/cart">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="20"
+                  viewBox="0 0 16 20"
+                  aria-hidden="true"
+                  class="nav-cart-icon"
+                >
+                  <g fill="currentColor" fill-rule="evenodd">
+                    <path
+                      d="M4 3.512v5.804c0 .377.349.684.779.684.43 0 .779-.307.779-.684V3.512C5.558 2.33 6.653 1.368 8 1.368c1.347 0 2.442.962 2.442 2.144v5.804c0 .377.35.684.78.684.43 0 .778-.307.778-.684V3.512C12 1.575 10.206 0 8 0S4 1.575 4 3.512z"
+                    ></path>
+                    <path
+                      d="M2.46 6.33c-.269 0-.489.194-.5.441L1.435 18.19a.436.436 0 00.131.332.52.52 0 00.348.149h12.151c.276 0 .501-.207.501-.462l-.525-11.436c-.011-.248-.23-.442-.5-.442H2.46zM14.448 20l-12.974-.001a1.591 1.591 0 01-1.064-.462 1.357 1.357 0 01-.408-1.03L.56 6.372C.595 5.602 1.277 5 2.11 5h11.78c.835 0 1.516.602 1.551 1.372l.56 12.197c0 .789-.697 1.431-1.553 1.431z"
+                    ></path>
+                  </g>
+                </svg>
+                (0)
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- 네비게이션 바 END -->
+      </header>
+    </div>
+    <!-- 헤더 END -->
+    <!-- MAIN START -->
+    <main class="main-contents">
+      <div>
+        <!-- MAIN CON 1 START -->
+        <div class="main-content">
+          <section class="content-1">
+            <div class="main-banner-pic">
+              <a>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      https://www.lego.com/cdn/cs/set/assets/bltbc3a3f7ce2c7bba8/71049-Minifigures-202505-Hero-Standard-Small-2.jpeg?format=webply&amp;fit=crop&amp;quality=75&amp;width=600&amp;height=600&amp;dpr=1   1x,
+                      https://www.lego.com/cdn/cs/set/assets/bltbc3a3f7ce2c7bba8/71049-Minifigures-202505-Hero-Standard-Small-2.jpeg?format=webply&amp;fit=crop&amp;quality=60&amp;width=600&amp;height=600&amp;dpr=2   2x,
+                      https://www.lego.com/cdn/cs/set/assets/bltbc3a3f7ce2c7bba8/71049-Minifigures-202505-Hero-Standard-Small-2.jpeg?format=webply&amp;fit=crop&amp;quality=55&amp;width=600&amp;height=600&amp;dpr=3   3x,
+                      https://www.lego.com/cdn/cs/set/assets/bltbc3a3f7ce2c7bba8/71049-Minifigures-202505-Hero-Standard-Small-2.jpeg?format=webply&amp;fit=crop&amp;quality=70&amp;width=600&amp;height=600&amp;dpr=1.5 1.5x
+                    "
+                    media="(max-width: 600px)"
+                    width="600"
+                    height="600"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      https://www.lego.com/cdn/cs/set/assets/bltae7648a3a3d1fd53/71049-Minifigures-202505-Hero-Standard-Medium-2.jpeg?format=webply&amp;fit=crop&amp;quality=75&amp;width=900&amp;height=445&amp;dpr=1   1x,
+                      https://www.lego.com/cdn/cs/set/assets/bltae7648a3a3d1fd53/71049-Minifigures-202505-Hero-Standard-Medium-2.jpeg?format=webply&amp;fit=crop&amp;quality=60&amp;width=900&amp;height=445&amp;dpr=2   2x,
+                      https://www.lego.com/cdn/cs/set/assets/bltae7648a3a3d1fd53/71049-Minifigures-202505-Hero-Standard-Medium-2.jpeg?format=webply&amp;fit=crop&amp;quality=55&amp;width=900&amp;height=445&amp;dpr=3   3x,
+                      https://www.lego.com/cdn/cs/set/assets/bltae7648a3a3d1fd53/71049-Minifigures-202505-Hero-Standard-Medium-2.jpeg?format=webply&amp;fit=crop&amp;quality=70&amp;width=900&amp;height=445&amp;dpr=1.5 1.5x
+                    "
+                    media="(max-width: 900px)"
+                    width="900"
+                    height="445"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      https://www.lego.com/cdn/cs/set/assets/blt50e5cf177329d526/71049-Minifigures-202505-Hero-Standard-Large-2.jpeg?format=webply&amp;fit=crop&amp;quality=75&amp;width=1600&amp;height=500&amp;dpr=1   1x,
+                      https://www.lego.com/cdn/cs/set/assets/blt50e5cf177329d526/71049-Minifigures-202505-Hero-Standard-Large-2.jpeg?format=webply&amp;fit=crop&amp;quality=60&amp;width=1600&amp;height=500&amp;dpr=2   2x,
+                      https://www.lego.com/cdn/cs/set/assets/blt50e5cf177329d526/71049-Minifigures-202505-Hero-Standard-Large-2.jpeg?format=webply&amp;fit=crop&amp;quality=55&amp;width=1600&amp;height=500&amp;dpr=3   3x,
+                      https://www.lego.com/cdn/cs/set/assets/blt50e5cf177329d526/71049-Minifigures-202505-Hero-Standard-Large-2.jpeg?format=webply&amp;fit=crop&amp;quality=70&amp;width=1600&amp;height=500&amp;dpr=1.5 1.5x
+                    "
+                    media="(min-width: 900px)"
+                    width="1600"
+                    height="500"
+                  />
+                  <img
+                    alt=""
+                    decoding="async"
+                    loading="eager"
+                    style="object-fit: fill"
+                    src="https://www.lego.com/cdn/cs/set/assets/bltbc3a3f7ce2c7bba8/71049-Minifigures-202505-Hero-Standard-Small-2.jpeg?fit=crop&amp;quality=80&amp;width=600&amp;height=600&amp;dpr=1"
+                  />
+                </picture>
+              </a>
+            </div>
+            <div class="main-banner-text">
+              <div class="main-banner-new">
+                <span>
+                  <span class="main-banner-text-new">신제품 </span>
+                </span>
+              </div>
+              <div class="main-banner-pomular">
+                <h2 class="main-banner-pomular-large">
+                  <span>포뮬러 1®에 대한 팬심을 뽐낼 기회!</span>
+                </h2>
+                <div class="main-banner-pomular-small">
+                  <span>
+                    레고® 미니피겨 팩을 열어 깜짝선물을 확인해 보세요.
+                  </span>
+                </div>
+              </div>
+              <div class="main-banner-shopping">
+                <a
+                  target=""
+                  rel="noreferrer"
+                  data-test="static-hero-cta-link"
+                  data-skroll="LinkWrapper"
+                  class="main-banner-shopping-btn"
+                  href="/ko-kr/categories/f1/f1-sets"
+                >
+                  쇼핑하기
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- MAIN CON 1 END -->
+        <!-- MAIN CON 2 START -->
+        <div class="main-content">
+          <section class="content-2">
+            <section class="tabs-primary">
+              <nav data-skroll="Tabs" aria-label="Tabbed quicklinks">
+                <ol class="tabs-list">
+                  <li class="V5AtfW_tab" data-test="tabs-list-item">
+                    <button
+                      role="tab"
+                      class="tabs-item tabs-item-active"
+                      aria-selected="true"
+                    >
+                      인기
+                    </button>
+                  </li>
+                  <li class="V5AtfW_tab" data-test="tabs-list-item">
+                    <button
+                      role="tab"
+                      class="tabs-item"
+                      tabindex="-1"
+                      aria-selected="false"
+                    >
+                      시리즈별
+                    </button>
+                  </li>
+                  <li class="V5AtfW_tab" data-test="tabs-list-item">
+                    <button
+                      role="tab"
+                      class="tabs-item"
+                      tabindex="-1"
+                      aria-selected="false"
+                    >
+                      연령별
+                    </button>
+                  </li>
+                </ol>
+              </nav>
+            </section>
+            <ol class="popular-list">
+              <li class="popular-item">
+                <a class="popular-item-card">
+                  <picture class="popular-item-pic">
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 600px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 900px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(min-width: 900px)"
+                      width="202"
+                    />
+                    <img
+                      alt=""
+                      decoding="async"
+                      loading="lazy"
+                      style="object-fit: fill"
+                      src="https://www.lego.com/cdn/cs/set/assets/blt549eae9757d03057/Updated-Home-AdvQuicklink-202504-NEW43263-2.jpg?fit=crop&amp;quality=80&amp;width=202&amp;dpr=1"
+                    />
+                  </picture>
+                  <span class="popular-item-markup">신제품</span>
+                </a>
+              </li>
+              <li class="popular-item">
+                <a class="popular-item-card">
+                  <picture class="popular-item-pic">
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 600px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 900px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(min-width: 900px)"
+                      width="202"
+                    />
+                    <img
+                      alt=""
+                      decoding="async"
+                      loading="lazy"
+                      style="object-fit: fill"
+                      src="https://www.lego.com/cdn/cs/set/assets/blt80cbe5c7845ebfc0/Updated-Home-AdvQuicklink-202504-Exc-10354.jpg?fit=crop&amp;quality=80&amp;width=202&amp;dpr=1"
+                    />
+                  </picture>
+                  <span class="popular-item-markup">독점제품</span>
+                </a>
+              </li>
+              <li class="popular-item">
+                <a class="popular-item-card">
+                  <picture class="popular-item-pic">
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 600px)"
+                      width="202" />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 900px)"
+                      width="202" />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(min-width: 900px)"
+                      width="202" />
+                    <img
+                      alt=""
+                      decoding="async"
+                      loading="lazy"
+                      style="object-fit: fill"
+                      src="https://www.lego.com/cdn/cs/set/assets/bltbf37b7817eb90e6b/Updated-Home-AdvQuicklink-202504-Offers.jpg?fit=crop&amp;quality=80&amp;width=202&amp;dpr=1"
+                  /></picture>
+                  <span class="popular-item-markup">할인</span>
+                </a>
+              </li>
+              <li class="popular-item">
+                <a class="popular-item-card">
+                  <picture class="popular-item-pic">
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 600px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 900px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(min-width: 900px)"
+                      width="202"
+                    />
+                    <img
+                      alt=""
+                      decoding="async"
+                      loading="lazy"
+                      style="object-fit: fill"
+                      src="https://www.lego.com/cdn/cs/set/assets/blt0709a5e8e6675fb2/Updated-Home-AdvQuicklink-202504-Allsets.jpg?fit=crop&amp;quality=80&amp;width=202&amp;dpr=1"
+                    />
+                  </picture>
+                  <span class="popular-item-markup">전체 세트</span>
+                </a>
+              </li>
+              <li class="popular-item">
+                <a class="popular-item-card">
+                  <picture class="popular-item-pic">
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 600px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 900px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(min-width: 900px)"
+                      width="202"
+                    />
+                    <img
+                      alt=""
+                      decoding="async"
+                      loading="lazy"
+                      style="object-fit: fill"
+                      src="https://www.lego.com/cdn/cs/set/assets/blt48ca15fe2908bb04/Updated-Home-AdvQuicklink-202504-18-2.jpg?fit=crop&amp;quality=80&amp;width=202&amp;dpr=1"
+                    />
+                  </picture>
+                  <span class="popular-item-markup">18+</span>
+                </a>
+              </li>
+              <li class="popular-item">
+                <a class="popular-item-card">
+                  <picture class="popular-item-pic">
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 600px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 900px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(min-width: 900px)"
+                      width="202"
+                    />
+                    <img
+                      alt=""
+                      decoding="async"
+                      loading="lazy"
+                      style="object-fit: fill"
+                      src="https://www.lego.com/cdn/cs/set/assets/bltb838f4c149d9db9d/Updated-Home-AdvQuicklink-202504-forkids.jpg?fit=crop&amp;quality=80&amp;width=202&amp;dpr=1"
+                    />
+                  </picture>
+                  <span class="popular-item-markup black">어린이용 세트</span>
+                </a>
+              </li>
+              <li class="popular-item">
+                <a class="popular-item-card">
+                  <picture class="popular-item-pic">
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 600px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 900px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(min-width: 900px)"
+                      width="202"
+                    />
+                    <img
+                      alt=""
+                      decoding="async"
+                      loading="lazy"
+                      style="object-fit: fill"
+                      src="https://www.lego.com/cdn/cs/set/assets/blt38e96f935962bafd/Updated-Home-AdvQuicklink-202504-shopByPrice.jpg?fit=crop&amp;quality=80&amp;width=202&amp;dpr=1"
+                    />
+                  </picture>
+                  <span class="popular-item-markup black">가격대별 제품</span>
+                </a>
+              </li>
+              <li class="popular-item">
+                <a class="popular-item-card">
+                  <picture class="popular-item-pic">
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 600px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(max-width: 900px)"
+                      width="202"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?format=webply&amp;fit=crop&amp;quality=75&amp;width=202&amp;dpr=1   1x,
+                        https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?format=webply&amp;fit=crop&amp;quality=60&amp;width=202&amp;dpr=2   2x,
+                        https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?format=webply&amp;fit=crop&amp;quality=55&amp;width=202&amp;dpr=3   3x,
+                        https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?format=webply&amp;fit=crop&amp;quality=70&amp;width=202&amp;dpr=1.5 1.5x
+                      "
+                      media="(min-width: 900px)"
+                      width="202"
+                    />
+                    <img
+                      alt=""
+                      decoding="async"
+                      loading="lazy"
+                      style="object-fit: fill"
+                      src="https://www.lego.com/cdn/cs/set/assets/blt36d09452150fe4a7/New_Insiders_Adv_Quicklink_Image.jpg?fit=crop&amp;quality=80&amp;width=202&amp;dpr=1"
+                    />
+                  </picture>
+                  <span class="popular-item-markup black">리워드 받기</span>
+                </a>
+              </li>
+            </ol>
+          </section>
+        </div>
+        <!-- MAIN CON 2 END -->
+        <!-- MAIN CON 3 START -->
+        <div class="main-content">
+          <section class="content-3">
+            <div class="black-contents"></div>
+          </section>
+        </div>
+        <!-- MAIN CON 3 END -->
+        <!-- MAIN CON 4 START -->
+        <div class="main-content">
+          <section class="content-4">
+            <h2 class="set-title">완벽한 세트 찾아보기</h2>
+            <nav data-skroll="Tabs" aria-label="Tabbed quicklinks">
+              <ol class="tabs-list">
+                <li class="V5AtfW_tab" data-test="tabs-list-item">
+                  <button
+                    role="tab"
+                    class="tabs-item tabs-item-active"
+                    aria-selected="true"
+                  >
+                    추천
+                  </button>
+                </li>
+                <li class="V5AtfW_tab" data-test="tabs-list-item">
+                  <button
+                    role="tab"
+                    class="tabs-item"
+                    tabindex="-1"
+                    aria-selected="false"
+                  >
+                    추천
+                  </button>
+                </li>
+                <li class="V5AtfW_tab" data-test="tabs-list-item">
+                  <button
+                    role="tab"
+                    class="tabs-item"
+                    tabindex="-1"
+                    aria-selected="false"
+                  >
+                    닌자고®
+                  </button>
+                </li>
+              </ol>
+            </nav>
+            <div class="set-contents-list">
+              <ol class="set-contents">
+                <li class="set-content-item">
+                  <article class="set-product">
+                    <div class="product-img-row">
+                      <img class="product-img" src="./images/Prod_1.webp" />
+                    </div>
+                    <div class="product-attr">
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-birth-icon"></div>
+                        8+
+                      </span>
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-bag-icon"></div>
+                        120
+                      </span>
+                    </div>
+                    <span class="product-title">장미</span>
+                    <div class="product-price-row">
+                      <span class="product-before-price">20,900 원</span>
+                      <span class="product-discount-price">10,450 원</span>
+                      <span class="product-discount">- 50% </span>
+                    </div>
+                    <button class="product-add-cart">장바구니 담기</button>
+                    <div class="product-wishlist-row">
+                      <button class="product-wishlist"></button>
+                      <span class="product-only">독점제품</span>
+                    </div>
+                  </article>
+                </li>
+                <li class="set-content-item">
+                  <article class="set-product">
+                    <div class="product-img-row">
+                      <img class="product-img" src="./images/prod_2.webp" />
+                    </div>
+                    <div class="product-attr">
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-birth-icon"></div>
+                        18+
+                      </span>
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-bag-icon"></div>
+                        251
+                      </span>
+                    </div>
+                    <span class="product-title">
+                      Oracle Red Bull Racing RB20 F1® 레이스 카
+                    </span>
+                    <div class="product-price-row">
+                      <span class="product-price">39,900 원</span>
+                    </div>
+                    <button class="product-add-cart">장바구니 담기</button>
+                    <div class="product-wishlist-row">
+                      <button class="product-wishlist"></button>
+                    </div>
+                  </article>
+                </li>
+                <li class="set-content-item">
+                  <article class="set-product">
+                    <div class="product-img-row">
+                      <img class="product-img" src="./images/prod_3.webp" />
+                    </div>
+                    <div class="product-attr">
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-birth-icon"></div>
+                        18+
+                      </span>
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-bag-icon"></div>
+                        1639
+                      </span>
+                    </div>
+                    <span class="product-title">
+                      Oracle Red Bull Racing RB20 F1 레이스 카
+                    </span>
+                    <div class="product-price-row">
+                      <span class="product-price">289,900 원</span>
+                    </div>
+                    <button class="product-add-cart">장바구니 담기</button>
+                    <div class="product-wishlist-row">
+                      <button class="product-wishlist"></button>
+                      <span class="product-only">독점제품</span>
+                    </div>
+                  </article>
+                </li>
+                <li class="set-content-item">
+                  <article class="set-product">
+                    <div class="product-img-row">
+                      <img class="product-img" src="./images/prod_4.webp" />
+                    </div>
+                    <div class="product-attr">
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-birth-icon"></div>
+                        10+
+                      </span>
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-bag-icon"></div>
+                        242
+                      </span>
+                    </div>
+                    <span class="product-title">
+                      MoneyGram Haas F1® Team VF-24 레이스 카
+                    </span>
+                    <div class="product-price-row">
+                      <span class="product-price">39,900 원</span>
+                    </div>
+                    <button class="product-add-cart">장바구니 담기</button>
+                    <div class="product-wishlist-row">
+                      <button class="product-wishlist"></button>
+                    </div>
+                  </article>
+                </li>
+                <li class="set-content-item">
+                  <article class="set-product">
+                    <div class="product-img-row">
+                      <img class="product-img" src="./images/prod_5.webp" />
+                    </div>
+                    <div class="product-attr">
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-birth-icon"></div>
+                        12+
+                      </span>
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-bag-icon"></div>
+                        528
+                      </span>
+                    </div>
+                    <span class="product-title">
+                      미니 디즈니 잠자는 숲속의 공주의 캐슬
+                    </span>
+                    <div class="product-price-row">
+                      <span class="product-price">55,000 원</span>
+                    </div>
+                    <button class="product-add-cart">장바구니 담기</button>
+                    <div class="product-wishlist-row">
+                      <button class="product-wishlist"></button>
+                    </div>
+                  </article>
+                </li>
+                <li class="set-content-item">
+                  <article class="set-product">
+                    <div class="product-img-row">
+                      <img class="product-img" src="./images/prod_6.webp" />
+                    </div>
+                    <div class="product-attr">
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-birth-icon"></div>
+                        9+</span
+                      >
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-bag-icon"></div>
+                        834
+                      </span>
+                    </div>
+                    <span class="product-title">릴로와 스티치 비치 하우스</span>
+                    <div class="product-price-row">
+                      <span class="product-price">139,900 원</span>
+                    </div>
+                    <button class="product-add-cart">장바구니 담기</button>
+                    <div class="product-wishlist-row">
+                      <button class="product-wishlist"></button>
+                    </div>
+                  </article>
+                </li>
+                <li class="set-content-item">
+                  <article class="set-product">
+                    <div class="product-img-row">
+                      <img class="product-img" src="./images/prod_7.webp" />
+                    </div>
+                    <div class="product-attr">
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-birth-icon"></div>
+                        10+
+                      </span>
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-bag-icon"></div>
+                        345
+                      </span>
+                    </div>
+                    <span class="product-title">축제 캘린더</span>
+                    <div class="product-price-row">
+                      <span class="product-before-price">42,000 원</span>
+                      <span class="product-discount-price">29,400 원</span>
+                      <span class="product-discount">- 30% </span>
+                    </div>
+                    <button class="product-add-cart">장바구니 담기</button>
+                    <div class="product-wishlist-row">
+                      <button class="product-wishlist"></button>
+                    </div>
+                  </article>
+                </li>
+                <li class="set-content-item">
+                  <article class="set-product">
+                    <div class="product-img-row">
+                      <img class="product-img" src="./images/prod_8.webp" />
+                    </div>
+                    <div class="product-attr">
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-birth-icon"></div>
+                        9+
+                      </span>
+                      <span class="product-attr-label">
+                        <div class="product-attr-label-bag-icon"></div>
+                        723
+                      </span>
+                    </div>
+                    <span class="product-title">샌드맨 타워</span>
+                    <div class="product-price-row">
+                      <span class="product-before-price">129,900 원</span>
+                      <span class="product-discount-price">90,930 원</span>
+                      <span class="product-discount">- 30% </span>
+                    </div>
+                    <button class="product-add-cart">장바구니 담기</button>
+                    <div class="product-wishlist-row">
+                      <button class="product-wishlist"></button>
+                      <span class="product-only">독점제품</span>
+                    </div>
+                  </article>
+                </li>
+              </ol>
+            </div>
+          </section>
+        </div>
+        <!-- MAIN CON 4 END -->
+        <!-- MAIN CON 5 START -->
+        <div class="main-content">
+          <section class="content-5">
+            <h3 class="content-5-title">
+              다른 사람의 조립 작품을 보고 영감을 얻으세요
+            </h3>
+            <p class="content-5-content">
+              창의성을 돋우는 LEGO® 세트로 새로운 조립 미션을 시작해 보세요.
+            </p>
+            <ol class="gallery-list">
+              <li class="gallery-item gallery-big">
+                <img src="./images/gallery_1.webp" />
+              </li>
+              <li class="gallery-item gallery-small">
+                <img src="./images/gallery_2.webp" />
+              </li>
+              <li class="gallery-item gallery-small">
+                <img src="./images/gallery_3.webp" />
+              </li>
+              <li class="gallery-item gallery-small">
+                <img src="./images/gallery_4.webp" />
+              </li>
+              <li class="gallery-item gallery-small">
+                <img src="./images/gallery_5.webp" />
+              </li>
+            </ol>
+          </section>
+        </div>
+        <!-- MAIN CON 5 END -->
+        <!-- MAIN CON 6 START -->
+        <div class="main-content">
+          <section class="content-6">
+            <img src="./images/ninjafo_back.webp" />
+            <div class="ninjago-contents">
+              <span class="ninjago-title">혼돈에 맞서라 </span>
+              <span class="ninjago-content"
+                >닌자고® 드래곤 라이징의 세계에 뛰어들어 나만의 멋진 닌자,
+                드래곤, 로봇 레고® 세트를 완성해 보세요.
+              </span>
+              <div class="ninjago-btn">
+                <button class="ninjago-shopping">
+                  쇼핑하기
+                  <img
+                    class="ninjafo_icon"
+                    src="https://assets.lego.com/icons/v7.4.0/chevron-right.svg"
+                  />
+                </button>
+                <button class="ninjago-more">
+                  자세히 보기
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    style="color: white; width: 24px; height: 24px"
+                  >
+                    <path
+                      d="M9.29 6.71a1 1 0 0 0 0 1.41L13.17 12l-3.88 3.88a1 1 0 1 0 1.41 1.41l4.59-4.59a1 1 0 0 0 0-1.41L10.7 6.7a1 1 0 0 0-1.41 0Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- MAIN CON 6 END -->
+        <!-- MAIN CON 7 START -->
+        <div class="main-content">
+          <section class="content-7">
+            <h2 class="content-7-title">더 알아보기</h2>
+            <ol class="about-list">
+              <li class="about-item">
+                <img src="./images/about-1.webp" class="about-img" />
+                <div class="about-contents">
+                  <span class="about-title">선물 준비하기</span>
+                  <span class="about-more">
+                    기념일이나 연령대, 가격대별로 선물 아이디어를 살펴보세요.
+                  </span>
+                  <button class="about-btn">쇼핑하기</button>
+                </div>
+              </li>
+              <li class="about-item">
+                <img src="./images/about-2.webp" class="about-img" />
+                <div class="about-contents">
+                  <span class="about-title">그동안 궁금했던 이야기</span>
+                  <span class="about-more">
+                    특별한 아이디어를 얻을 수 있는 다양한 글을 읽어보세요.
+                  </span>
+                  <button class="about-btn">알아보기</button>
+                </div>
+              </li>
+              <li class="about-item">
+                <img src="./images/about-3.webp" class="about-img" />
+                <div class="about-contents">
+                  <span class="about-title">LEGO® Builder 앱 다운로드</span>
+                  <span class="about-more">
+                    디지털 조립설명서, 가족 활동 팁, 확대/축소, 3D 기능 등
+                    다양한 즐길 거리를 확인해 보세요!
+                  </span>
+                  <button class="about-btn">다운받기</button>
+                </div>
+              </li>
+            </ol>
+          </section>
+        </div>
+        <!-- MAIN CON 7 END -->
+        <!-- MAIN CON 8 START -->
+        <div class="main-content">
+          <section class="content-8">
+            <img
+              src="https://www.lego.com/cdn/cs/set/assets/blt8c8829195c9fc54f/Insider-v1-Page-StaticHero-Short-Large.jpg?format=webply&fit=crop&quality=60&width=1600&height=200&dpr=2"
+            />
+            <div class="content-8-item">
+              <span class="content-8-title">
+                멤버십 리워드, 색다른 경험과 선물 등 새로운 세계를 만나보세요.
+              </span>
+              <button class="sign-up">
+                회원 가입
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  style="color: white; width: 24px; height: 24px"
+                >
+                  <path
+                    d="M9.29 6.71a1 1 0 0 0 0 1.41L13.17 12l-3.88 3.88a1 1 0 1 0 1.41 1.41l4.59-4.59a1 1 0 0 0 0-1.41L10.7 6.7a1 1 0 0 0-1.41 0Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </section>
+        </div>
+        <!-- MAIN CON 8 END -->
+        <!-- MAIN CON 9 START -->
+        <div class="main-content">
+          <section class="content-9">
+            <div class="content-9-box">
+              <span
+                class="content-9-txt"
+                style="
+                  font-size: var(--st-font-size-sm1);
+                  line-height: var(--st-line-height-sm1);
+                  max-height: calc(var(--st-line-height-sm1) * 3);
+                  -webkit-line-clamp: 3;
+                "
+              >
+                <span
+                  >공식 레고® 쇼핑몰을 찾아주신 여러분, 환영합니다! 이곳에서
+                  <a href="/toys-for-girls">여자아이</a>와
+                  <a href="/toys-for-boys">남자아이</a>,
+                  <a href="/categories/age">어린이</a>, 성인들을 위한 레고 조립
+                  세트, <a href="/gifts">선물</a>, 멋진 디스플레이 세트를 비롯한
+                  여러 제품을 모두 만나보세요.
+                  <a href="/gifts/birthday-gifts">생일</a>,
+                  <a href="/valentines-day/gifts">발렌타인데이</a>, 어버이날처럼
+                  특별한 날을 위한 선물을 준비하세요. 유아부터 청소년 그리고
+                  성인까지, 모두를 기쁘게 할 만한 선물을 골라보세요. 상상력을
+                  발휘해 무한한 놀이를 즐길 수 있는 장난감을 골라보세요.
+                  <a href="/categories/adults-welcome"
+                    >성인들을 위한 레고 세트</a
+                  >
+                  역시 <a href="/categories/cars">자동차</a>,
+                  <a
+                    href="/themes/adults-welcome/botanical-collection/artificial-flowers"
+                    >꽃</a
+                  >, <a href="/categories/gaming">게임</a> 등 다양한
+                  <a href="/categories/interests">관심사</a>에 꼭 맞게 엄선해
+                  두었답니다!</span
+                >
+              </span>
+            </div>
+          </section>
+        </div>
+        <!-- MAIN CON 9 END -->
+      </div>
+    </main>
+    <!-- MAIN END -->
+    <!-- FOOTER START -->
+
+    <!-- FOOTER END -->
+  </body>
+</html>
