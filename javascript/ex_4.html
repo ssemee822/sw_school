@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 300px;
+      }
+      #open-btn {
+        position: absolute;
+        left: 20px;
+        top: 240px;
+      }
+      #contents {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        width: 300px;
+      }
+      #close-btn {
+        width: 100px;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./잇지.jpeg" />
+    <button onclick="openCont()" id="open-btn">상세 설명 보기</button>
+    <div id="contents" style="display: none">
+      <h3>어쩌구</h3>
+      어쩌고 저쩌고 어쩌고 저쩌고 어쩌고 저쩌고 어쩌고 저쩌고
+      <button onclick="closeCont()" id="close-btn">상세 설명 닫기</button>
+    </div>
+  </body>
+</html>
+<script>
+  function openCont() {
+    document.getElementById("contents").style = "display: flex";
+    document.getElementById("open-btn").style = "display: none";
+  }
+  function closeCont() {
+    document.getElementById("contents").style = "display: none";
+    document.getElementById("open-btn").style = "display: block";
+  }
+</script>
