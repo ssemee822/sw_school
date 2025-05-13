@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>회원가입 / 로그인</title>
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <h2>로그인</h2>
+    <form id="login-form">
+      <label>
+        아이디:
+        <input type="text" id="login-identifier" required />
+      </label>
+
+      <label>
+        비밀번호:
+        <input type="password" id="login-password" required />
+      </label>
+      <button type="submit">로그인</button>
+    </form>
+    <button id="signup"><a href="./signup.html">회원가입</a></button>
+  </body>
+</html>
+<script>
+  document.getElementById("login-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    login();
+  });
+
+  function login() {
+    const login_username = document.getElementById("login-identifier").value;
+    const login_password = document.getElementById("login-password").value;
+    const local_username = localStorage.getItem("username");
+    const local_password = localStorage.getItem("password");
+
+    if (login_username != local_username) {
+      alert("회원이 아닙니다.");
+      return;
+    }
+    if (login_password != local_password) {
+      alert("비밀번호가 일치하지 않습니다.");
+      return;
+    }
+    localStorage.setItem("isLogin", true);
+    window.location.href = "./lego.html";
+  }
+</script>

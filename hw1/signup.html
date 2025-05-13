@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>회원가입 / 로그인</title>
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <h2>회원가입</h2>
+    <form id="signup-form">
+      <label>
+        아이디:
+        <input type="text" id="signup-username" required />
+        <span id="username-feedback" class="feedback"></span>
+      </label>
+
+      <label>
+        이메일:
+        <input type="email" id="signup-email" required />
+        <span id="email-feedback" class="feedback"></span>
+      </label>
+
+      <label>
+        비밀번호:
+        <input type="password" id="signup-password" required />
+        <span id="password-feedback" class="feedback"></span>
+      </label>
+
+      <label>
+        비밀번호 확인:
+        <input type="password" id="signup-confirm" required />
+        <span id="confirm-feedback" class="feedback"></span>
+      </label>
+
+      <button disabled type="submit">회원가입</button>
+    </form>
+    <script>
+      const username = document.getElementById("signup-username");
+      const email = document.getElementById("signup-email");
+      const password = document.getElementById("signup-password");
+      const confirm = document.getElementById("signup-confirm");
+
+      const usernameFeedback = document.getElementById("username-feedback");
+      const emailFeedback = document.getElementById("email-feedback");
+      const passwordFeedback = document.getElementById("password-feedback");
+      const confirmFeedback = document.getElementById("confirm-feedback");
+
+      username.addEventListener("input", () => {
+        const regex = /^[a-zA-Z0-9]{5,12}$/;
+        if (regex.test(username.value)) {
+          usernameFeedback.textContent = "사용 가능한 아이디입니다.";
+          usernameFeedback.className = "feedback valid";
+        } else {
+          usernameFeedback.textContent =
+            "5~12자의 영문자 또는 숫자만 사용 가능합니다.";
+          usernameFeedback.className = "feedback invalid";
+        }
+      });
+
+      email.addEventListener("input", () => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (regex.test(email.value)) {
+          emailFeedback.textContent = "올바른 이메일 형식입니다.";
+          emailFeedback.className = "feedback valid";
+        } else {
+          emailFeedback.textContent = "이메일 형식이 올바르지 않습니다.";
+          emailFeedback.className = "feedback invalid";
+        }
+      });
+
+      password.addEventListener("input", () => {
+        const regex = /^(?=.*[a-zA-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+        if (regex.test(password.value)) {
+          passwordFeedback.textContent = "안전한 비밀번호입니다.";
+          passwordFeedback.className = "feedback valid";
+        } else {
+          passwordFeedback.textContent =
+            "영문자+숫자 조합 8자 이상이어야 합니다.";
+          passwordFeedback.className = "feedback invalid";
+        }
+      });
+
+      confirm.addEventListener("input", () => {
+        if (confirm.value === password.value && confirm.value !== "") {
+          confirmFeedback.textContent = "비밀번호가 일치합니다.";
+          confirmFeedback.className = "feedback valid";
+        } else {
+          confirmFeedback.textContent = "비밀번호가 일치하지 않습니다.";
+          confirmFeedback.className = "feedback invalid";
+        }
+      });
+
+      const signupBtn = document.querySelector("#signup-form button");
+
+      function validateForm() {
+        const isUsernameValid = /^[a-zA-Z0-9]{5,12}$/.test(username.value);
+        const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
+        const isPasswordValid = /^(?=.*[a-zA-Z])(?=.*\d)[A-Za-z\d]{8,}$/.test(
+          password.value
+        );
+        const isConfirmValid =
+          confirm.value === password.value && confirm.value !== "";
+
+        const isFormValid =
+          isUsernameValid && isEmailValid && isPasswordValid && isConfirmValid;
+        signupBtn.disabled = !isFormValid;
+      }
+
+      // 모든 입력에 대해 이벤트 바인딩
+      [username, email, password, confirm].forEach((input) => {
+        input.addEventListener("input", validateForm);
+      });
+
+      document.getElementById("signup-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        signUp();
+      });
+
+      function signUp() {
+        localStorage.setItem("username", username.value);
+        localStorage.setItem("email", email.value);
+        localStorage.setItem("password", password.value);
+        localStorage.setItem("isLogin", false);
+
+        alert("회원가입이 완료되었습니다.");
+        window.location.href = "./login.html";
+      }
+    </script>
+  </body>
+</html>

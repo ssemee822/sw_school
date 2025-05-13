@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./lego.css" />
   </head>
 
-  <body>
+  <body style="display: none">
     <!-- 헤더 START -->
     <div>
       <header class="header">
@@ -1248,3 +1248,18 @@
     <!-- FOOTER END -->
   </body>
 </html>
+<script>
+  checkLogin();
+
+  function checkLogin() {
+    const check_login = localStorage.getItem("isLogin");
+    console.log(check_login);
+
+    if (check_login != "true") {
+      alert("로그인 후 이용 가능합니다.");
+      window.location.href = "./login.html";
+    } else {
+      document.body.style = "display:block";
+    }
+  }
+</script>
