@@ -1,9 +1,5 @@
 <template>
-  <router-view />
+  <div class="min-h-screen transition-all">
+    <router-view />
+  </div>
 </template>
-
-<!-- <script setup>
-import UserList from "./pages/UserList.vue";
-import SignupForm from "./pages/SignupForm.vue";
-import LoginForm from "./pages/LoginForm.vue";
-</script> -->

@@ -27,33 +27,67 @@
       </div>
     </form>
   </div>
+  <BaseModal v-model="showModal">
+    <template v-if="modalType === 'failLogin'">
+      <h2 class="text-lg font-bold mb-5">로그인 실패</h2>
+      <p class="mb-10">잘못된 이메일 또는 비밀번호</p>
+      <div class="flex justify-end gap-3">
+        <button
+          @click="showModal = false"
+          class="hover:text-red-800 font-semibold"
+        >
+          닫기
+        </button>
+      </div>
+    </template>
+    <template v-else-if="modalType === 'failServerLogin'">
+      <h2 class="text-lg font-bold mb-5">로그인 실패</h2>
+      <p class="mb-10">서버 오류</p>
+      <div class="flex justify-end gap-3">
+        <button
+          @click="showModal = false"
+          class="hover:text-red-800 font-semibold"
+        >
+          닫기
+        </button>
+      </div>
+    </template>
+  </BaseModal>
 </template>
 
 <script setup>
 import { reactive, ref, watch } from "vue";
+import { useRouter } from "vue-router";
 import axios from "axios";
+import { useAuthStore } from "@/stores/auth";
 import BaseInput from "../components/common/BaseInput.vue";
 import BaseButton from "../components/common/BaseButton.vue";
+import BaseModal from "@/components/common/BaseModal.vue";
 import FormFeedback from "../components/common/FormFeedback.vue";
-import { useRouter } from "vue-router";
-const router = useRouter();
 
+const showModal = ref(false);
+const modalType = ref("");
+const router = useRouter();
+const isDisabled = ref(true);
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const AuthStore = useAuthStore();
+const isLogin = AuthStore.isLogin;
 const form = reactive({
   email: "",
   pwd: "",
 });
-
 const formInfo = reactive({
   email: "",
   pwd: "",
 });
+const openModal = (type) => {
+  modalType.value = type;
+  showModal.value = true;
+};
 
-const isDisabled = ref(true);
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const isLogin = localStorage.getItem("isLoggedIn");
-
-if (isLogin) {
-  localStorage.setItem("isLoggedIn", "false");
+if (isLogin == "true") {
+  useAuthStore().setLogin("false");
+  useAuthStore().setEmail("");
 }
 watch(form, () => {
   formInfo.email = emailPattern.test(form.email)
@@ -77,15 +111,15 @@ const handleLogin = async () => {
     );
 
     if (res.data) {
-      console.log("로그인 성공", res);
-      localStorage.setItem("isLoggedIn", "true");
+      useAuthStore().setLogin("true");
+      useAuthStore().setEmail(form.email);
       router.push("/");
     } else {
-      alert("로그인 실패: 잘못된 이메일 또는 비밀번호");
+      openModal("failLogin");
     }
   } catch (err) {
     console.error(err);
-    alert("로그인 실패: 서버 오류");
+    openModal("failServerLogin");
   }
 };
 </script>

@@ -28,35 +28,74 @@
       <BaseButton :disabled="isDisabled">회원가입</BaseButton>
     </form>
   </div>
+  <BaseModal v-model="showModal">
+    <template v-if="modalType === 'failSignup'">
+      <h2 class="text-lg font-bold mb-10">회원가입 실패</h2>
+      <div class="flex justify-end gap-3">
+        <button
+          @click="showModal = false"
+          class="hover:text-red-800 font-semibold"
+        >
+          닫기
+        </button>
+      </div>
+    </template>
+    <template v-else-if="modalType === 'failServerSignup'">
+      <h2 class="text-lg font-bold mb-5">회원가입 실패</h2>
+      <p class="mb-10">서버 오류</p>
+      <div class="flex justify-end gap-3">
+        <button
+          @click="showModal = false"
+          class="hover:text-red-800 font-semibold"
+        >
+          닫기
+        </button>
+      </div>
+    </template>
+    <template v-else-if="modalType === 'succSignup'">
+      <h2 class="text-lg font-bold mb-5">회원가입 성공</h2>
+      <p class="mb-10">로그인 후 이용해주세요</p>
+      <div class="flex justify-end gap-3">
+        <RouterLink to="/login">
+          <button class="hover:text-red-800 font-semibold">닫기</button>
+        </RouterLink>
+      </div>
+    </template>
+  </BaseModal>
 </template>
 
 <script setup>
 import { ref, reactive, watch } from "vue";
-import axios from "axios";
+import { useAuthApi } from "../api/auth";
 import BaseInput from "../components/common/BaseInput.vue";
 import BaseButton from "../components/common/BaseButton.vue";
 import FormFeedback from "../components/common/FormFeedback.vue";
-import { useRouter } from "vue-router";
+import BaseModal from "@/components/common/BaseModal.vue";
 
-const router = useRouter();
+const { signup } = useAuthApi();
 
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const pwdPattern = /^(?=.*[a-zA-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+const showModal = ref(false);
+const modalType = ref("");
+const isDisabled = ref(true);
 const form = reactive({
   email: "",
   pwd: "",
   confirm: "",
   name: "",
 });
-
 const formInfo = reactive({
   email: "",
   pwd: "",
   confirm: "",
   name: "",
 });
-
-const isDisabled = ref(true);
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const pwdPattern = /^(?=.*[a-zA-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+const openModal = (type) => {
+  modalType.value = type;
+  showModal.value = true;
+};
 
 watch(form, () => {
   formInfo.email = emailPattern.test(form.email)
@@ -74,26 +113,12 @@ watch(form, () => {
 });
 
 const handleSubmit = async () => {
-  try {
-    const payload = {
-      email: form.email,
-      pwd: form.pwd,
-      name: form.name,
-    };
-    const res = await axios.post(
-      "http://222.117.237.119:8111/auth/signup",
-      payload
-    );
-
-    if (res.data) {
-      console.log("회원 가입 성공");
-      router.push("/login");
-    } else {
-      alert("회원 가입 실패");
-    }
-  } catch (err) {
-    console.error(err);
-    alert("가입 실패! 서버 오류 발생");
+  const res = await signup(form.email, form.pwd, form.name);
+  if (res.data) {
+    console.log("회원 가입 성공");
+    openModal("succSignup");
+  } else {
+    openModal("failSignup");
   }
 };
 </script>
