@@ -11,6 +11,11 @@ import ex_1 from "./components/ex_1.vue";
 import Card from "./components/Cardview.vue";
 import ex_2 from "./components/ex_2.vue";
 import Usercard from "./components/UserCard.vue";
+import ChildComp from "./components/childComponent.vue";
+import News from "./components/News.vue";
+import Signup from "./components/Signup.vue";
+import Array from "./components/Array.vue";
+import UserList from "./components/UserList.vue";
 </script>
 
 <template>
@@ -30,7 +35,11 @@ import Usercard from "./components/UserCard.vue";
   <input v-model.number="inputAge" placeholder="input age" />
   <Card :name="inputName" :job="inputJob" :age="inputAge"></Card> -->
   <!-- <ex_2 :userList="usersObject"></ex_2> -->
-  <Usercard></Usercard>
+  <!-- <Usercard></Usercard> -->
+  <!-- <p>{{ message }}</p>
+  <ChildComp @send-message="handleMessage"></ChildComp> -->
+  <!-- <News></News> -->
+  <UserList></UserList>
 </template>
 
 <style scoped>
